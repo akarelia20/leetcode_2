@@ -1,6 +1,5 @@
 class Solution:
     def longestConsecutive(self, nums: List[int]) -> int:
-        # delcare set with all the uniequ values from num
         unique= set(nums)
         long = 0
         for i in nums:
