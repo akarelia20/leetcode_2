@@ -3,8 +3,7 @@ class Solution:
     def isValidSudoku(self, board: List[List[str]]) -> bool:
         row= collections.defaultdict(set)
         col= collections.defaultdict(set)
-        box= collections.defaultdict(set)
-        
+        box= collections.defaultdict(set) 
         for i in range(len(board)):
             for j in range(len(board[i])):
                 if board[i][j] == ".":
@@ -16,7 +15,5 @@ class Solution:
                 row[i].add(board[i][j])
                 col[j].add(board[i][j])
                 box [(i//3, j//3)]. add(board[i][j])
-                
-                print(box)
         return True
                     
