@@ -1,24 +1,18 @@
 class Solution:
     def longestConsecutive(self, nums: List[int]) -> int:
         unique = set(nums)
-        dict= {}
         longest = 0
         length = 1
         for n in unique:
             i = 1
-            dict[n] = length
             while n-i in unique:
                 i += 1
                 length = i
-
             i = 1
             while n+i in unique:
                 i += 1
                 length = i
-            dict[n] = length
-            
-            longest = max(length, longest)
-            
+            longest = max(length, longest) 
             if longest == len(nums):
                 break      
                 
