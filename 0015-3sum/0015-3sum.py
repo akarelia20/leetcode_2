@@ -18,6 +18,7 @@ class Solution:
                     unique.add(y)
                     r -= 1
                     l += 1
+#                     prevents duplicate entries in res array
                     while nums[l] == nums[l - 1] and l < r:
                         l += 1
        
