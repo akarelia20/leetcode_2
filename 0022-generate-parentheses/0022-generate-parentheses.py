@@ -6,7 +6,6 @@ class Solution:
      
         result = []
         s = ""
-        z= ""
         
     
         def helper(openN, closeN, s):
