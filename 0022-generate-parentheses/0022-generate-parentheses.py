@@ -1,5 +1,9 @@
 class Solution:
     def generateParenthesis(self, n: int) -> List[str]: 
+#         open, close = n
+#         add close parenthesis only when close is less than open (close < open)
+#         each sting of combination always starts with open parenthesis
+     
         result = []
         s = ""
         z= ""
@@ -10,20 +14,13 @@ class Solution:
                 result.append(s)
                 return
             if openN < n:
-                print("s",s+"(")
-                z = s+"("
-                print(s )
-                helper(openN+1, closeN, z)
+                helper(openN+1, closeN, s+"(")
                 
             if closeN < openN:
-                s += ")"
-                helper(openN, closeN + 1, s)
-                # s= ""
+                helper(openN, closeN + 1, s +")")
+              
         
         helper(0 , 0, s)
         return result
     
-    #         open, close = n
-#         add close parenthesis only when close is less than open (close < open)
-#         each sting of combination always starts with open parenthesis
-        
+     
