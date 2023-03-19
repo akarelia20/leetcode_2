@@ -1,24 +1,23 @@
 class Solution:
     def dailyTemperatures(self, temp: List[int]) -> List[int]:
-        # stores indexes
+        # stack stores indexes and res stores the #of days
         stack = []
-        # result arr
         res= []
         
         for i in range(len(temp)):
+            # first index append index into stack and append 0 in res
             if i== 0:
                 res.append(0)
                 stack.append(i)
-                # print(stack, res)
+             
+            # if not first index append 0 in "res" array
             else: 
                 res.append(0)
-                # print(temp[stack[-1]],temp[i] )
-                while stack and temp[stack[-1]] < temp[i]:
-                    res[stack[-1]]= i-(stack[-1])
-                    stack.pop()
-            
-                stack.append(i)
-#                 print(stack, res)
+                while stack and temp[stack[-1]] < temp[i]: #until temp[i] > the last stack-val
+                    res[stack[-1]]= i-(stack[-1])   
+                    stack.pop()    #pop the last index from stack
+                stack.append(i)    # append cur index in stack
+
         return res
                
                    
