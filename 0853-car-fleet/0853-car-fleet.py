@@ -4,7 +4,7 @@ class Solution:
         dict = {}
         stack = []
             
-#        postion (key), [speed, steps or iteration to reach target](value)
+#        dict stores => postion (key), [speed, steps or iteration to reach target](value)
         for i in range (len(position)):
             dict[position[i]] = [speed[i] ,(target-position[i])/speed[i]]
         position.sort(reverse= True)
