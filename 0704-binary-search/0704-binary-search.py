@@ -10,7 +10,6 @@ class Solution:
             elif nums[mid] < target:
                 l = mid+1
             elif nums[mid] == target:
-                return mid
-            
+                return mid 
         return -1
         
