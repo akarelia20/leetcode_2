@@ -20,7 +20,7 @@ class Solution:
         l, r = 0, len(matrix[0])-1
         
         while l <= r:
-            m = (l+r)//2
+            m = l+(r-l)//2
             if target > matrix[row][m]:
                 l = m +1
             elif target < matrix[row][m]:
