@@ -8,7 +8,6 @@ class Solution:
             if min_num < nums[r]:
                 break
             mid = (r+l)//2
-    
 #         left half of the arr has min
             if nums[mid] < min_num:
                 min_num = min(nums[mid], min_num) 
