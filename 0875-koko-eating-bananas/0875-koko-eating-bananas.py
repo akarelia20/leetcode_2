@@ -4,6 +4,8 @@ class Solution:
         l, r = 1, max(piles)
         res = r
 
+#  two pinter approch 1 at min and max(piles) at maximum in combination with binary search
+
         while l <= r:
             mid = (r+l)//2
             hr_sum= 0
@@ -16,6 +18,9 @@ class Solution:
                 l = mid+1        
         return res
                 
+        
+#  time comp= O(log(max(piles).p))
+# where max(piles) is maximaum value in the piles array and p is len of piles array
            
             
         
