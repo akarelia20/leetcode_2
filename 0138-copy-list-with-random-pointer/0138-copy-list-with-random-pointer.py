@@ -9,21 +9,21 @@ class Node:
 
 class Solution:
     def copyRandomList(self, head: 'Optional[Node]') -> 'Optional[Node]':
-#itrate through the given linked list and create deep copy of the nodes without showing the next or random pointers and store it in hash map
-        copy= {None:None} #handles the case where next or random pointer is Null/None
-        
+
+        #itrate through the given linked list and create deep copy of the nodes without showing the next or random pointers and store it in hash map
+        copy= {None:None}     #handles the case where next or random pointer is Null/None  
         cur = head
         while cur:
             copy[cur]= Node(cur.val)
             cur = cur.next
-
-        
+            
 # now add .next and .random to the copy nodes while itrating through original linked list
-        
         cur = head #reset pointer back to head
         while cur:
-            copy[cur].next = copy[cur.next] #connects the node's next pointer to the exsisting node in the dict
-            copy[cur].random = copy[cur.random] #connects the node's random pointer to the exsisting node in the dict
+            #connects the node's next pointer to the exsisting node in the dict
+            copy[cur].next = copy[cur.next] 
+            #connects the node's random pointer to the exsisting node in the dict
+            copy[cur].random = copy[cur.random] 
             cur= cur.next
         
         return copy[head]
