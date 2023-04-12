@@ -14,7 +14,7 @@ class Solution:
                 return 0
             right = dfs(node.right)
             left = dfs(node.left)
-            res = max (res, right + left)
-            return 1 + max(left,right)
+            res = max (res, right + left) # updates max diameter
+            return 1 + max(left,right)  #gives the height at the root node at every recursive call
         dfs(root)  
         return res
