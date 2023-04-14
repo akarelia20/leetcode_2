@@ -16,7 +16,7 @@ class Solution:
     def dfs(self, root, level, res):
         if not root:
             return 0
-        if level +1 > len(res):
+        if level == len(res):
             res.append([])
         res[level].append(root.val)
         self.dfs(root.left, level+1, res)
