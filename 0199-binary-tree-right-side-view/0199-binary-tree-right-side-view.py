@@ -13,8 +13,7 @@ class Solution:
     def helper(self, root,depth, res):
         if not root:
             return 0
-#         rightnodes will be appended until it is present but if right side has depth of 5 and left is with depth of 6 then it will append 5 right nodes and last (6th)node will be left node
-# order of recursive call matters , call right recursive function first
+# if len is 3 and depth is 3 (meaning level 4 because depth starts at 0) then it needs append 1 more element to res.
         if len(res) == depth:
             res.append(root.val)
         self.helper(root.right, depth+1, res)
