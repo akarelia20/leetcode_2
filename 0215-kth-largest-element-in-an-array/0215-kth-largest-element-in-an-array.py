@@ -5,13 +5,14 @@ class Solution:
         
         res = 0
         for i in range(k):
+            res= heapq.heappop(nums)
             if i+1 == k:
-                res = heapq.heappop(nums)
+                
                 if res < 1:
                     return abs(res)
                 else:
                     return -1*(res)
-            heapq.heappop(nums)
+            
         
         
                 
