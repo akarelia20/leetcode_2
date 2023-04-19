@@ -3,7 +3,6 @@ class Solution:
         nums = [-i for i in nums]
         heapq.heapify(nums)
         
-        print(nums)
         res = 0
         for i in range(k):
             if i+1 == k:
