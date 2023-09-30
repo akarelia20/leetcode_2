@@ -8,5 +8,6 @@ class Solution(object):
         for i in nums:
             if i in unique:
                 return True
-            else:
-                unique.add(i)
+            
+            unique.add(i)
+        return False
