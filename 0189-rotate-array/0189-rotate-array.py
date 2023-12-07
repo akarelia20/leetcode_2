@@ -17,27 +17,3 @@ class Solution(object):
             nums[start], nums[end] = nums[end], nums[start]
             start += 1
             end -= 1
-
-#     def rotate(self, nums, k):
-#         """
-#         :type nums: List[int]
-#         :type k: int
-#         :rtype: None Do not return anything, modify nums in-place instead.
-#         """
-#         start_pos = len(nums) - k
-#         x = []
-#         counter = 0
-#         if k < len(nums):
-#             y = nums[start_pos -1] 
-#             for i in range(0,len(nums)):
-#                 print(i)
-#                 # if ((start_pos+i) < len(nums)):
-#                 z = nums[i] 
-#                 nums[i] = nums[(start_pos)+i]
-#                 nums[(start_pos)+(i-1)] = z
-#                 if (i == k-1) and (k!= start_pos):
-#                     nums[len(nums)-1] = y
-#                 print(x, nums)
-        
-        
-    
