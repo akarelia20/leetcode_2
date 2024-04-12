@@ -10,20 +10,18 @@ class Solution:
         # check if "-" exsist in the begining and if so  you will have sign variable change to -1 from 1(default)
         sign = 1
         num = 0
-        m = 0
+        i = 0
         
         if s[0].isnumeric() == False and s[0] == "-" :
             sign = -1
-            m+=1
-    
+            i+=1
         
-        for i in range(m, len(s)):
+        for i in range(i, len(s)):
             if i == 0 :
                 if s[i] =="+":
                     continue
             if s[i].isnumeric() == True:
                 num = num*10 + int(s[i])
-                # print(num)
             else:
                 break
      
