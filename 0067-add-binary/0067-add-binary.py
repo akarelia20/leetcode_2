@@ -8,7 +8,6 @@ class Solution:
         index_b= len(b)-1
         
         while index_a >= 0 or index_b >=0 or carry != 0:
-            print("a",index_a,"b", index_b)
             if index_a >= 0 and index_b >= 0:
                 sum = (int(a[index_a]) + int(b[index_b]))  +carry
                 result = str(sum%2)+ result 
@@ -28,9 +27,6 @@ class Solution:
             elif carry > 0:
                 result = str(carry)+ result
                 carry = 0
-            print( "carry", carry, "result", result)
-                
-                
         return result
                 
             
